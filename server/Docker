@@ -1,5 +1,5 @@
 # Start from a lightweight OpenJDK image
-FROM eclipse-temurin:23-jdk-jammy
+FROM eclipse-temurin:23-jdk
 
 # Set working directory
 WORKDIR /app

@@ -12,11 +12,14 @@ import org.springframework.web.util.HtmlUtils;
 @Service
 public class ContactService {
 
-    @Value("${MAIL_USERNAME}")
-    private String senderEmail;
+//    @Value("${MAIL_USERNAME}")
+//    private String senderEmail;
+//
+//    @Value("${MAIL_RECEIVER}")
+//    private String receiverEmail;
 
-    @Value("${MAIL_RECEIVER}")
-    private String receiverEmail;
+    private final String senderEmail = System.getenv("MAIL_USERNAME");
+    private final String receiverEmail = System.getenv("MAIL_RECEIVER");
 
     @Autowired
     private JavaMailSender mailSender;

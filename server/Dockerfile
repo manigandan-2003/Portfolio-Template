@@ -1,17 +1,25 @@
-# Step 1: Use an official Java runtime as the base image
-FROM eclipse-temurin:21-jdk-alpine
+# Step 1: Use Maven + JDK image to build
+FROM maven:3.9.2-eclipse-temurin-21 AS build
 
-# Step 2: Set working directory
 WORKDIR /app
 
-# Step 3: Copy the .env file into the container
-COPY .env .env
+# Copy pom.xml and source code
+COPY pom.xml .
+COPY src ./src
 
-# Step 4: Copy the JAR file into the container
-COPY target/server-0.0.1-SNAPSHOT.jar app.jar
+# Build the JAR
+RUN mvn clean package -DskipTests
 
-# Step 5: Expose port
+# Step 2: Use smaller JDK image for running
+FROM eclipse-temurin:21-jdk-alpine
+
+WORKDIR /app
+
+# Copy the JAR from the build stage
+COPY --from=build /app/target/server-0.0.1-SNAPSHOT.jar app.jar
+
+# Expose port
 EXPOSE 8080
 
-# Step 6: Command to run the application
+# Run
 ENTRYPOINT ["java", "-jar", "app.jar"]

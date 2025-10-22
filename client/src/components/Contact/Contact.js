@@ -44,7 +44,7 @@ const Contact = () => {
     setStatus("Sending...");
 
     try {
-      await axios.post("https://localhost:5000/api/contact", formData);
+      await axios.post("${process.env.REACT_APP_API_URL}/api/contact", formData);
       setStatus("Message sent successfully ✅");
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {

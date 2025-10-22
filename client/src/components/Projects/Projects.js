@@ -82,7 +82,7 @@ function Projects() {
               isBlog={false}
               title="Smart Helmet for Underground Miners (Group Project)"
               description="Developed a smart helmet solution for enhancing safety in mining operations and used 2 Arduino UNO boards for sensor integration and it is just a prototype. Implemented sensors to detect poisonous gases, measure temperature and humidity, and monitor pressure changes."
-              ghLink="https://github.com/manigandan-2003/ECS-App"
+              ghLink=""
               demoLink="" 
             />
           </Col>

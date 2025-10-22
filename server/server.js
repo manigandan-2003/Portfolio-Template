@@ -11,7 +11,7 @@ const app = express();
 // Configure CORS (restrict to your portfolio domain if needed)
 app.use(
   cors({
-    origin: "*", // e.g., "https://manigandan-portfolio.vercel.app"
+    origin: process.env.ALLOWED_ORIGIN, // e.g., "https://manigandan-portfolio.vercel.app"
   })
 );
 

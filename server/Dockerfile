@@ -1,5 +1,5 @@
 # Step 1: Use Maven + JDK image to build
-FROM maven:3.9.2-eclipse-temurin-21 AS build
+FROM maven:3.9.2-openjdk-21 AS build
 
 WORKDIR /app
 

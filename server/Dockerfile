@@ -1,28 +1,17 @@
-# 1️⃣ Use a lightweight OpenJDK 23 image as the base
-FROM eclipse-temurin:23-jdk
+# Step 1: Use an official Java runtime as the base image
+FROM eclipse-temurin:21-jdk-alpine
 
-# 2️⃣ Set the working directory inside the container
+# Step 2: Set working directory
 WORKDIR /app
 
-# 3️⃣ Copy Maven wrapper and project files first (caches dependencies)
-COPY mvnw .
-COPY .mvn .mvn
-COPY pom.xml .
+# Step 3: Copy the .env file into the container
+COPY .env .env
 
-# 4️⃣ Make the Maven wrapper executable
-RUN chmod +x mvnw
+# Step 4: Copy the JAR file into the container
+COPY target/server-0.0.1-SNAPSHOT.jar app.jar
 
-# 5️⃣ Download dependencies (offline, cached if pom.xml unchanged)
-RUN ./mvnw dependency:go-offline -B
-
-# 6️⃣ Copy the full source code into the container
-COPY src ./src
-
-# 7️⃣ Build the Spring Boot app (skip tests for faster build)
-RUN ./mvnw clean package -DskipTests
-
-# 8️⃣ Expose the port your app runs on
+# Step 5: Expose port
 EXPOSE 8080
 
-# 9️⃣ Run the Spring Boot jar
-CMD ["java", "-jar", "target/server-0.0.1-SNAPSHOT.jar"]
+# Step 6: Command to run the application
+ENTRYPOINT ["java", "-jar", "app.jar"]

@@ -12,10 +12,10 @@ import org.springframework.web.util.HtmlUtils;
 @Service
 public class ContactService {
 
-    @Value("${spring.mail.username}")
+    @Value("${MAIL_USERNAME}")
     private String senderEmail;
 
-    @Value("${spring.mail.receiver}")
+    @Value("${MAIL_RECEIVER}")
     private String receiverEmail;
 
     @Autowired

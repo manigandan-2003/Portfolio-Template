@@ -39,6 +39,7 @@ app.post("/api/contact", async (req, res) => {
     to: process.env.RECEIVER_EMAIL,
     from: process.env.SENDER_EMAIL,
     subject: `Portfolio Contact: ${subject}`,
+    replyTo: email,
     text: `
       Name: ${name}
       Email: ${email}

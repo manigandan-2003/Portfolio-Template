@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import sgMail from "@sendgrid/mail";
 import sanitizeHtml from "sanitize-html";
+import { Resend } from "resend";
 
 dotenv.config();
 
@@ -11,14 +12,16 @@ const app = express();
 // Configure CORS (restrict to your portfolio domain if needed)
 app.use(
   cors({
-    origin: process.env.ALLOWED_ORIGIN, // e.g., "https://manigandan-portfolio.vercel.app"
+    origin: process.env.ALLOWED_ORIGIN,
   })
 );
 
 app.use(express.json());
 
 // Initialize SendGrid with API key
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+// sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 app.post("/api/contact", async (req, res) => {
   let { name, email, subject, message } = req.body;
@@ -36,8 +39,8 @@ app.post("/api/contact", async (req, res) => {
 
   // Email configuration
   const msg = {
+    from: "Portfolio Contact <onboarding@resend.dev>",
     to: process.env.RECEIVER_EMAIL,
-    from: process.env.SENDER_EMAIL,
     subject: `Portfolio Contact: ${subject}`,
     replyTo: email,
     text: `
@@ -56,7 +59,7 @@ app.post("/api/contact", async (req, res) => {
   };
 
   try {
-    await sgMail.send(msg);
+    await resend.emails.send(msg);
     res.status(200).json({ message: "Email sent successfully!" });
   } catch (error) {
     console.error("Error sending email:", error);

@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
-import Github from "./Github";
+// import Github from "./Github";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
@@ -32,13 +32,20 @@ function About() {
               style={{ paddingTop: "120px", paddingBottom: "50px" }}
               className="about-img"
             >
-              <img src={laptopImg} alt="about" className="img-fluid about-image" />
+              <img
+                src={laptopImg}
+                alt="about"
+                className="img-fluid about-image"
+              />
             </Col>
           </Row>
           <Row>
             <Col md={12} className="about-section-column">
               <p className="about-section-title">Education</p>
-              <div className="about-section-content" style={{ justifyContent: "center" }}>
+              <div
+                className="about-section-content"
+                style={{ justifyContent: "center" }}
+              >
                 <p>
                   B.Tech in Computer Science Engineering
                   <br />
@@ -54,7 +61,10 @@ function About() {
           <Row>
             <Col md={12} className="about-section-column">
               <p className="about-section-title">Work Experience</p>
-              <div className="about-section-content" style={{ justifyContent: "center" }}>
+              <div
+                className="about-section-content"
+                style={{ justifyContent: "center" }}
+              >
                 <p className="work-timeline">
                   Frontend Developer – Tata Consultancy Services (TCS)
                   <br />
@@ -66,13 +76,14 @@ function About() {
                 <ul className="contribution-list">
                   <li>
                     Working on TCS BANCS, an enterprise banking platform used by
-                    internal banking staff for operational workflows and management.
+                    internal banking staff for operational workflows and
+                    management.
                   </li>
 
                   <li>
-                    Developed and maintained dynamic UI components using JavaScript
-                    and XML, ensuring seamless frontend functionality across banking
-                    modules.
+                    Developed and maintained dynamic UI components using
+                    JavaScript and XML, ensuring seamless frontend functionality
+                    across banking modules.
                   </li>
 
                   <li>
@@ -82,8 +93,8 @@ function About() {
                   </li>
 
                   <li>
-                    Configured labels, dropdowns, and UI mappings using Oracle SQL
-                    through database-driven keys and metadata structures.
+                    Configured labels, dropdowns, and UI mappings using Oracle
+                    SQL through database-driven keys and metadata structures.
                   </li>
 
                   <li>
@@ -97,7 +108,10 @@ function About() {
           </Row>
           <Row>
             <Col md={12} className="about-section-column">
-              <div className="about-section-content" style={{ justifyContent: "center" }}>
+              <div
+                className="about-section-content"
+                style={{ justifyContent: "center" }}
+              >
                 <p className="work-timeline">
                   Junior Software Engineer – SigaInfotech
                   <br />
@@ -107,9 +121,9 @@ function About() {
                 <ul className="contribution-list">
                   <li>
                     Revamped the Carrez old-age home management platform,
-                    building 15+ responsive UI pages and integrating REST
-                    APIs, improving feature load speed by 30% and enhancing
-                    user engagement.
+                    building 15+ responsive UI pages and integrating REST APIs,
+                    improving feature load speed by 30% and enhancing user
+                    engagement.
                   </li>
                   <li>
                     Engineered 4+ backend entities and corresponding APIs to
@@ -117,14 +131,14 @@ function About() {
                     operations by 40%.
                   </li>
                   <li>
-                    Worked on EasyDine, a restaurant management system,
-                    focusing on Superadmin portal API integration.
+                    Worked on EasyDine, a restaurant management system, focusing
+                    on Superadmin portal API integration.
                   </li>
                   <li>
                     Collaborated with cross-functional teams using Git, Jira,
-                    and Microsoft Teams to deliver 5+ production-ready
-                    features within sprint timelines, ensuring zero critical
-                    bugs post-deployment.
+                    and Microsoft Teams to deliver 5+ production-ready features
+                    within sprint timelines, ensuring zero critical bugs
+                    post-deployment.
                   </li>
                 </ul>
               </div>

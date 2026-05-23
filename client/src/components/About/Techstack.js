@@ -1,6 +1,4 @@
 import { Col, Row } from "react-bootstrap";
-import { SiNextdotjs } from "react-icons/si";
-import C from "../../Assets/TechIcons/C++.svg";
 import Javascript from "../../Assets/TechIcons/Javascript.svg";
 import Node from "../../Assets/TechIcons/Node.svg";
 import ReactIcon from "../../Assets/TechIcons/React.svg";
@@ -9,13 +7,9 @@ import Python from "../../Assets/TechIcons/Python.svg";
 import Typescript from "../../Assets/TechIcons/Typescript.svg";
 import Git from "../../Assets/TechIcons/Git.svg";
 import Github from "../../Assets/TechIcons/Github.svg";
-import Firebase from "../../Assets/TechIcons/Firebase.svg";
-import Redis from "../../Assets/TechIcons/Redis.svg";
-import Docker from "../../Assets/TechIcons/Docker.svg";
 import Mongo from "../../Assets/TechIcons/Mongo.svg";
 import PostgreSql from "../../Assets/TechIcons/PostgreSql.svg";
 import MySql from "../../Assets/TechIcons/MySql.svg";
-import Kubernates from "../../Assets/TechIcons/Kubernates.svg";
 import Redux from "../../Assets/TechIcons/Redux.svg";
 import Jwt from "../../Assets/TechIcons/Jwt.svg";
 import Html from "../../Assets/TechIcons/Html.svg";
@@ -24,7 +18,6 @@ import Css from "../../Assets/TechIcons/Css.svg";
 import Tailwind from "../../Assets/TechIcons/Tailwind.svg";
 import Postman from "../../Assets/TechIcons/Postman.svg";
 import Vercel from "../../Assets/TechIcons/Vercel.svg";
-import AWS from "../../Assets/TechIcons/AWS.svg";
 
 function Techstack() {
   return (

@@ -1,4 +1,3 @@
-import { Row, Col } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import { ImPointRight } from "react-icons/im";
 

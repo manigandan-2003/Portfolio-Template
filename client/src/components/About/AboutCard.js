@@ -22,13 +22,16 @@ function AboutCard() {
               {" "}
               Vellore Institute of Technology, Amaravati
             </span>.
-            <br />I have hands-on experience as a{" "}
+            <br />
+            I currently work as a{" "}
+            <span className="purple">Frontend Developer at Tata Consultancy Services (TCS)</span>{" "}
+            on the TCS BANCS banking platform and previously worked as a{" "}
+            <span className="purple">Full Stack Developer at SigaInfotech</span>.{" "}
+            I have hands-on experience building{" "}
+            <span className="purple">enterprise and full-stack web applications</span> using{" "}
             <span className="purple">
-              Junior Software Engineer (Part-Time)
-            </span>{" "}
-            and enjoy building{" "}
-            <span className="purple">full-stack web applications</span> using{" "}
-            <span className="purple">React, Node.js, Express, and MongoDB</span>.
+              React, Node.js, Express, MongoDB, JavaScript, Java, XML, and Oracle SQL
+            </span>.
             <br />
             <br />
             Outside of coding, I love engaging in activities that keep me

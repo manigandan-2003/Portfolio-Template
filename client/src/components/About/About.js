@@ -56,6 +56,49 @@ function About() {
               <p className="about-section-title">Work Experience</p>
               <div className="about-section-content" style={{ justifyContent: "center" }}>
                 <p className="work-timeline">
+                  Frontend Developer – Tata Consultancy Services (TCS)
+                  <br />
+                  <span className="timeline-badge">Nov 2025 – Present</span>
+                </p>
+
+                <p className="about-section-title">Key Contributions</p>
+
+                <ul className="contribution-list">
+                  <li>
+                    Working on TCS BANCS, an enterprise banking platform used by
+                    internal banking staff for operational workflows and management.
+                  </li>
+
+                  <li>
+                    Developed and maintained dynamic UI components using JavaScript
+                    and XML, ensuring seamless frontend functionality across banking
+                    modules.
+                  </li>
+
+                  <li>
+                    Integrated backend APIs using Java and collaborated with
+                    enterprise services to support secure and scalable banking
+                    operations.
+                  </li>
+
+                  <li>
+                    Configured labels, dropdowns, and UI mappings using Oracle SQL
+                    through database-driven keys and metadata structures.
+                  </li>
+
+                  <li>
+                    Worked in agile teams to deliver production-ready enterprise
+                    features while following banking application standards and
+                    deployment processes.
+                  </li>
+                </ul>
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={12} className="about-section-column">
+              <div className="about-section-content" style={{ justifyContent: "center" }}>
+                <p className="work-timeline">
                   Junior Software Engineer – SigaInfotech
                   <br />
                   <span className="timeline-badge">Apr 2025 – Sep 2025</span>
